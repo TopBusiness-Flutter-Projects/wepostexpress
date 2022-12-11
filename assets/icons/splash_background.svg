@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="751.805" height="791.465" viewBox="0 0 751.805 791.465">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_13" data-name="Group 13" transform="translate(0 -12.954)" opacity="0.4">
+    <path id="Fill_1" data-name="Fill 1" d="M142.5,441.268,12.954,216.894,116.587,7.479,349.762,22.437,479.3,246.811,375.671,456.226Z" transform="translate(340.455 0) rotate(30)" opacity="0.21" fill="url(#linear-gradient)"/>
+    <path id="Fill_4" data-name="Fill 4" d="M165.711,513.156,15.065,252.23,135.582,8.7l271.164,17.4L557.391,287.02,436.875,530.551Z" transform="translate(252.737 66.253) rotate(30)" opacity="0.21" fill="url(#linear-gradient)"/>
+    <path id="Fill_7" data-name="Fill 7" d="M145.006,435.343,0,217.672,145.006,0H435.02L580.027,217.672,435.02,435.343Z" transform="translate(435.343 65.314) rotate(90)" opacity="0.55" fill="url(#linear-gradient)"/>
+    <path id="Fill_10" data-name="Fill 10" d="M121.312,364.2,0,182.1,121.312,0H363.935L485.247,182.1,363.935,364.2Z" transform="translate(529.768 133.475) rotate(90)" opacity="0.54" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

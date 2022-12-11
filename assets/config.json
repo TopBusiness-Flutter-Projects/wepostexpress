@@ -1,0 +1,27 @@
+{
+  "baseUrl": "https://wepostexpress.com",
+  "styling": {
+    "ThemeMode.light": {
+      "appBarBackgroundColor": "4a61ee",
+      "tabBarBackgroundColor": "ffffff",
+      "bottomBarBackgroundColor": "ffffff",
+      "appBarColor": "ffffff",
+      "tabBarActiveTextColor": "283952",
+      "tabBarIndicatorColor": "4a61ee",
+      "tabBarTextColor": "6D737C",
+      "bottomBarActiveColor": "4a61ee",
+      "bottomBarInActiveColor": "6D737C",
+      "primary": "F19F22",
+      "secondary": "919CB4",
+      "secondaryVariant": "969696",
+      "background": "ffffff",
+      "sidemenutextcolor": "333739",
+      "scaffoldBackgroundColor": "ffffff",
+      "buttonTextColor": "ffffff",
+      "dividerColor": "f6f6f6",
+      "shadowColor": "000",
+      "inputsbackgroundcolor": "f6f6f6"
+    }
+  },
+  "themeMode": "ThemeMode.light"
+}

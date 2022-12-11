@@ -1,0 +1,102 @@
+name: wepostexpress
+description: A new Flutter application.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.2.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  easy_localization: ^3.0.1
+  get_it: ^7.2.0
+  shared_preferences: ^2.0.15
+  after_layout: ^1.2.0
+  rect_getter: ^1.1.0
+  conditional_builder: ^1.0.2
+  bloc: ^7.2.0
+  url_launcher: ^6.1.6
+  smooth_page_indicator: ^1.0.0+2
+  shimmer: ^2.0.0
+  infinity_page_view: ^1.0.0
+  http: ^0.13.5
+  http_interceptor: ^1.0.2
+  dio: ^4.0.6
+  dartz: ^0.10.1
+  flutter_hex_color: ^2.0.0
+  flutter_bloc: ^7.1.1
+  flutter_svg: ^1.1.6
+  fluttertoast: ^8.1.1
+  font_awesome_flutter: ^10.2.1
+  dots_indicator: ^2.1.0
+  #  google_maps_place_picker: ^1.0.1
+  geolocator: ^9.0.2
+  path_provider: ^2.0.11
+  align_positioned: ^3.0.0
+  modal_bottom_sheet: ^2.1.2
+  expandable: ^5.0.1
+  #qr_code_scanner: ^1.0.1
+  firebase_messaging: ^14.1.0
+  firebase_core: ^2.2.0
+  signature: ^5.3.0
+  pull_to_refresh: ^2.0.0
+  change_app_package_name: ^1.1.0
+  flutter_launcher_icons: ^0.10.0
+  connectivity: ^3.0.6
+dependency_overrides:
+  platform: ^3.1.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+    - assets/langs/en.json
+    - assets/config.json
+    - assets/images/
+    - assets/icons/
+    - assets/anim/
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Medium.ttf
+          weight: 400
+        - asset: assets/fonts/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat-BoldItalic.ttf
+          weight: 800
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"
