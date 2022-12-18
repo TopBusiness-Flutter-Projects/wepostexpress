@@ -121,14 +121,14 @@ class _SearchScreenState extends State<SearchScreen> {
                                               if (!currentFocus.hasPrimaryFocus) {
                                                 currentFocus.unfocus();
                                               }
-                                              // Navigator.push(context,MaterialPageRoute(builder: (_)=>QRViewExample())).then((value) {
-                                              //   print('barcode value');
-                                              //   print(value);
-                                              //   if(value !=null){
-                                              //     BlocProvider.of<SearchBloc>(context).add(FetchSearchEvent(value));
-                                              //   }
-                                              //   return null;
-                                              // });
+                                              Navigator.push(context,MaterialPageRoute(builder: (_)=>QRViewExample())).then((value) {
+                                                print('barcode value');
+                                                print(value);
+                                                if(value !=null){
+                                                  BlocProvider.of<SearchBloc>(context).add(FetchSearchEvent(value));
+                                                }
+                                                return null;
+                                              });
                                             },
                                             child: SizedBox(
                                               width: MediaQuery.of(context).size.height * (5.72 / 100),

@@ -123,14 +123,14 @@ class _HomeSingleScreenState extends State<HomeSingleScreen> {
                                           if (!currentFocus.hasPrimaryFocus) {
                                             currentFocus.unfocus();
                                           }
-                                          // Navigator.push(context,MaterialPageRoute(builder: (_)=>QRViewExample())).then((value) {
-                                          //   print('barcode value');
-                                          //   print(value);
-                                          //   if(value !=null){
-                                          //     Navigator.push(context,MaterialPageRoute(builder: (_)=>SearchScreen(code: value,)));
-                                          //   }
-                                          //   return null;
-                                          // });
+                                          Navigator.push(context,MaterialPageRoute(builder: (_)=>QRViewExample())).then((value) {
+                                            print('barcode value');
+                                            print(value);
+                                            if(value !=null){
+                                              Navigator.push(context,MaterialPageRoute(builder: (_)=>SearchScreen(code: value,)));
+                                            }
+                                            return null;
+                                          });
                                         },
                                         child: SizedBox(
                                           width: MediaQuery.of(context).size.height * (5.72 / 100),
