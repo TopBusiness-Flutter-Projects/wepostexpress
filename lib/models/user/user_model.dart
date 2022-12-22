@@ -33,7 +33,7 @@ class UserModel {
             'type': type,
             'code': code.toString(),
             'balance': balance.toString(),
-            'api_token': api_token,
+            // 'api_token': api_token,
             'error': error,
             'created_by': created_by,
             'created_by_type': created_by_type,
@@ -65,7 +65,7 @@ class UserModel {
             type: user['type'].toString(),
             balance: user['balance'].toString(),
             code: user['code'].toString(),
-            api_token: user['api_token'],
+            // api_token: user['api_token'],
             error: user['error'],
             name: user['name'],
             email: user['email'],
@@ -84,7 +84,7 @@ class UserModel {
     final String name;
     final String email;
     final String type;
-     final String api_token;
+      String api_token;
     final String error;
       String balance;
     final String responsible_mobile;

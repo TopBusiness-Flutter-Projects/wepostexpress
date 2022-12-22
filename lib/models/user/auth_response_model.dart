@@ -6,7 +6,7 @@ class AuthResponse {
         this.error,
         this.token_type,
         this.email,
-        this.api_token,
+        this.remember_token,
         this.expires_at,
         this.user,
     });
@@ -38,7 +38,7 @@ class AuthResponse {
             token_type: user['token_type'],
             user: user['user'],
             email: list,
-            api_token: user['api_token'],
+            remember_token: user['remember_token'],
             error: user['error'],
         );
         print('dddasds');
@@ -48,7 +48,7 @@ class AuthResponse {
     }
 
     final String expires_at;
-    final String api_token;
+    final String remember_token;
     final List<String> email;
     final String token_type;
     final String error;

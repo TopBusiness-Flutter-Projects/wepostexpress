@@ -41,13 +41,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
       },
       builder:(context, state) =>  Scaffold(
         appBar: AppBar(
+          elevation: .5,
           leadingWidth: 0,
           leading: Container(),
-          backgroundColor: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
+          backgroundColor: rgboOrHex(Config.get.styling[Config.get.themeMode].background),
           title: Text(
             tr(LocalKeys.profile),
             style: TextStyle(
-              color: rgboOrHex(Config.get.styling[Config.get.themeMode].buttonTextColor),
+              color: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
               fontWeight: FontWeight.w600,
             ),
           ),

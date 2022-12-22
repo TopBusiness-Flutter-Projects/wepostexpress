@@ -34,12 +34,14 @@ class SplashScreen extends StatelessWidget {
             Navigator.push(context, MaterialPageRoute(builder: (_) => ConfigLoaderScreen()));
           }
           if (state is SuccessSplashState) {
-            Timer(Duration(seconds: 1), () async {
+            Timer(Duration(seconds: 2), () async {
               final userData = await di<CacheHelper>().get(AppKeys.userData);
               if (userData != null ) {
                 di<Repository>().user = UserModel.fromJson(userData);
                 print('userData');
                 print(di<Repository>().user);
+                print('di<Repository>().user.api_token');
+                print(di<Repository>().user.api_token);
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomeScreen()));
               } else {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => LoginScreen()));
@@ -50,28 +52,17 @@ class SplashScreen extends StatelessWidget {
         },
         child: Scaffold(
           backgroundColor:
-              rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
+              rgboOrHex(Config.get.styling[Config.get.themeMode].background),
           body: Stack(
             children: [
-              Column(
-                children: [
-                  Expanded(
-                      child: MySVG(
-                    svgPath: 'assets/icons/splash_background.svg',
-                  )),
-                  Spacer(),
-                ],
-              ),
-              BlocBuilder<GlobalBloc, GlobalStates>(
-                builder: (context, state) => Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(40.0),
-                    child: MySVG(
-                                    size: MediaQuery.of(context).size.height * (11 / 100),
-                                    svgPath: 'assets/icons/logo.svg',
-                                  ),
-
+              Center(
+                child: Padding(
+                  padding: EdgeInsets.all(40.0),
+                  child: Image.asset(
+                    // size:80,
+                    'assets/images/logo_remove.png',
                   ),
+
                 ),
               ),
             ],

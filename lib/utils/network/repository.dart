@@ -155,12 +155,16 @@ class RepoImpl extends Repository {
   Future<Either<String, String>> getUserWallet() async {
     return _basicErrorHandling<String>(
       onSuccess: () async {
+        print('user.api_token');
+        print(user.api_token);
         final call = await apiHelper.getData(
           di<Config>().baseURL,
-          'get-wallet?type=captain',
+          'get-wallet?type=driver',
           token: user.api_token,
         );
         di<Repository>().user.balance = call;
+        print('Caaaaaaalllller');
+        print(call);
         return call;
       },
       onServerError: (exception) async {
@@ -191,16 +195,17 @@ class RepoImpl extends Repository {
         jsonDecode(f);
         print('loginData');
         print(data);
+        print(data['remember_token']);
         print(data is! String);
         if (data is! String && data['message'] == null) {
           AuthResponse authResponse = AuthResponse.fromJson(data);
           UserModel userModel = UserModel.fromJson(authResponse.user);
-          if (userModel.type != null && userModel.type == 'captain') {
-            userModel.api_token != authResponse.api_token;
+          print('tooooooooooken');
+          print(authResponse.remember_token);
+            userModel.api_token = authResponse.remember_token;
             user = userModel;
-            cacheHelper.put(AppKeys.userData, userModel.toJson());
-          }
-          return userModel;
+            cacheHelper.put(AppKeys.userData, user.toJson());
+          return user;
         } else {
           return UserModel.fromJson({
             'error': (data is! String) ? data['message'] : data,
@@ -371,7 +376,7 @@ class RepoImpl extends Repository {
         print(authResponse.email);
         if (authResponse.email == null || authResponse.email.isEmpty) {
           UserModel userModel = UserModel.fromJson(authResponse.user);
-          userModel.api_token != authResponse.api_token;
+          userModel.api_token != authResponse.remember_token;
           user = userModel;
           cacheHelper.put(AppKeys.userData, userModel.toJson());
           return userModel;
@@ -860,6 +865,8 @@ class RepoImpl extends Repository {
     return _basicErrorHandling<List<MissionModel>>(
       onSuccess: () async {
         List<MissionModel> missions = [];
+        print('llllllllllsssssssssss');
+        print(user.api_token);
         final call = await apiHelper.getData(
           di<Config>().baseURL,
           'missions?client_id=${user.id}}&status_id=$statusId&page=1',

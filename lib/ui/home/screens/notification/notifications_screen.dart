@@ -45,18 +45,11 @@ class NotificationsScreen extends StatelessWidget {
                 height: (MediaQuery.of(context).size.height * (15.67 / 100)),
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.zero,
-                color: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
+                color: rgboOrHex(Config.get.styling[Config.get.themeMode].background),
                 alignment: Alignment.topCenter,
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: [
-                    SvgPicture.asset(
-                      'assets/icons/notifications_bg.svg',
-                      fit: BoxFit.cover,
-                      color: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.width,
-                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -64,9 +57,8 @@ class NotificationsScreen extends StatelessWidget {
                           child: Center(
                             child: Padding(
                               padding: EdgeInsets.all(40.0),
-                              child: MySVG(
-                                    size: MediaQuery.of(context).size.height * (11 / 100),
-                                    svgPath: 'assets/icons/logo.svg',
+                              child:  Image.asset(
+                                    'assets/images/logo_remove.png',
                                   ),
 
                             ),

@@ -46,19 +46,9 @@ class _HomeSingleScreenState extends State<HomeSingleScreen> {
               child: Container(
                 height: (MediaQuery.of(context).size.height * (47.0 / 100)) -
                     (MediaQuery.of(context).size.height * (3.0 / 100)),
-                color: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
+                color: rgboOrHex(Config.get.styling[Config.get.themeMode].background),
                 child: Stack(
                   children: [
-                    Column(
-                      children: [
-                        Expanded(
-                          child: MySVG(
-                            svgPath: 'assets/icons/splash_background.svg',
-                          ),
-                        ),
-                        Spacer(),
-                      ],
-                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -66,9 +56,9 @@ class _HomeSingleScreenState extends State<HomeSingleScreen> {
                           child: Center(
                             child: Padding(
                               padding: EdgeInsets.all(40.0),
-                              child: MySVG(
-                                    size: MediaQuery.of(context).size.height * (11 / 100),
-                                    svgPath: 'assets/icons/logo.svg',
+                              child: Image.asset(
+                                    // size: MediaQuery.of(context).size.height * (11 / 100),
+                                     'assets/images/logo_remove.png',
                                   ),
                             ),
                           ),
@@ -99,8 +89,8 @@ class _HomeSingleScreenState extends State<HomeSingleScreen> {
                                           hintText: tr(LocalKeys.your_tracking_id),
                                           hintStyle: TextStyle(
                                               fontSize: 14,
-                                              color: rgboOrHex(Config.get.styling[Config.get.themeMode].secondary)),
-                                          border: InputBorder.none,
+                                              color: rgboOrHex(Config.get.styling[Config.get.themeMode].primary)),
+                                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(18)),
                                           prefixIcon: SizedBox(
                                             width: MediaQuery.of(context).size.height * (1.72 / 100),
                                             height: MediaQuery.of(context).size.height * (1.72 / 100),
@@ -170,7 +160,7 @@ class _HomeSingleScreenState extends State<HomeSingleScreen> {
                     children: [
                       Container(
                         width: double.infinity,
-                        color: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
+                        color: rgboOrHex(Config.get.styling[Config.get.themeMode].background),
                         child: Row(
                           children: [
                             SizedBox(
@@ -179,13 +169,14 @@ class _HomeSingleScreenState extends State<HomeSingleScreen> {
                             Expanded(
                               child: TabBar(
                                 isScrollable: true,
-                                indicatorColor: Colors.white,
+                                indicatorColor: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
                                 tabs: [
                                   Tab(
                                     child: Text(
                                       tr(LocalKeys.assigned_and_approved),
                                       style: TextStyle(
                                         fontSize: 12,
+                                        color: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
@@ -194,6 +185,7 @@ class _HomeSingleScreenState extends State<HomeSingleScreen> {
                                     child: Text(
                                       tr(LocalKeys.received_status),
                                       style: TextStyle(
+                                        color: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
                                         fontSize: 12,
                                         fontWeight: FontWeight.w500,
                                       ),
@@ -203,6 +195,7 @@ class _HomeSingleScreenState extends State<HomeSingleScreen> {
                                     child: Text(
                                       tr(LocalKeys.done),
                                       style: TextStyle(
+                                        color: rgboOrHex(Config.get.styling[Config.get.themeMode].primary),
                                         fontSize: 12,
                                         fontWeight: FontWeight.w500,
                                       ),

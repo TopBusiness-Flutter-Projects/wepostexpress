@@ -23,6 +23,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    emailController.text='driver@driver.com';
+    passwordController.text='123456';
     return BlocProvider<LoginBloc>(
       create: (BuildContext context) => di<LoginBloc>()..add(FetchLoginEvent()),
       child: BlocListener<LoginBloc, LoginStates>(
@@ -75,9 +77,9 @@ class LoginScreen extends StatelessWidget {
                                 ),
                                 Align(
                                     alignment: Alignment.center,
-                                    child: MySVG(
-                                      size: MediaQuery.of(context).size.height * (11 / 100),
-                                      svgPath: 'assets/icons/logo.svg',
+                                    child: Image.asset(
+                                      // size: MediaQuery.of(context).size.height * (11 / 100),
+                                      'assets/images/logo_remove.png',
                                     ),
                                 ),
                                 SizedBox(

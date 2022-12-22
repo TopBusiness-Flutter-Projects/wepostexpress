@@ -16,29 +16,6 @@ class MySVG extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ConditionalBuilder(
-        condition: fromFiles == null ||!fromFiles,
-        builder: (context) => ConditionalBuilder(
-          condition: svgPath == null && !isSvg(
-                  ''//Config.get.logo.dark
-          ),
-          builder: (context) => Image(
-            image: NetworkImage(
-                    ''//Config.get.logo.dark,
-            ),
-            height: size ?? 60,
-            fit: BoxFit.contain,
-          ),
-          fallback: (context) => svgPath != null
-                  ? SvgPicture.asset(svgPath)
-                  : SvgPicture.network(
-            '',//Config.get.logo.dark,
-            height: 60,
-          ),
-        ),
-        fallback: (context) => Image(image: FileImage(File(imagePath??''))),
-      ),
-    );
+    return  SvgPicture.asset(svgPath);
   }
 }
