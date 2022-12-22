@@ -204,8 +204,8 @@ class RepoImpl extends Repository {
           print(authResponse.remember_token);
             userModel.api_token = authResponse.remember_token;
             user = userModel;
-            cacheHelper.put(AppKeys.userData, user.toJson());
-          return user;
+            cacheHelper.put(AppKeys.userData, userModel.toJson());
+          return userModel;
         } else {
           return UserModel.fromJson({
             'error': (data is! String) ? data['message'] : data,

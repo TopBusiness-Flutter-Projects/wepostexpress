@@ -48,7 +48,7 @@ class LoginBloc extends Bloc<LoginEvents, LoginStates> {
           print('dasdasdasdasd');
           yield ErrorLoginState(r.error, false);
         } else {
-          if (r.type == 5) {
+          if (r.error != null) {
             yield ErrorLoginState(r.error, true);
           } else {
             await di<CacheHelper>().put(AppKeys.userData, r);
